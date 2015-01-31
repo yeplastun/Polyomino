@@ -12,12 +12,12 @@ using std::endl;
 
 /* ----------
  
-    (i + j) % 2 == 0 
-    (i + j) % 2 == 1
-    1 - white
-    0 - black
+ (i + j) % 2 == 0
+ (i + j) % 2 == 1
+ 1 - white
+ 0 - black
  
-   ---------- */
+ ---------- */
 
 class Detail {
 private:
@@ -74,30 +74,30 @@ void Detail::Make(int number) {
     switch (number)
     {
         case 1:
-            color = 1;
+            color = 0;
             num = 1;
             height = 3;
             length = 3;
-            before = 1;
-            after = 1;
-            AddPoint(0, 0);
-            AddPoint(0, 1);
-            AddPoint(1, 1);
-            AddPoint(2, 1);
-            AddPoint(2, 2);
-            break;
-        case 2:
-            color = 1;
-            num = 2;
-            height = 4;
-            length = 2;
-            before = 3;
-            after = 3;
+            before = 0;
+            after = -1;
             AddPoint(0, 1);
             AddPoint(1, 0);
             AddPoint(1, 1);
-            AddPoint(2, 0);
-            AddPoint(3, 0);
+            AddPoint(1, 2);
+            AddPoint(2, 1);
+            break;
+        case 2:
+            color = 0;
+            num = 2;
+            height = 1;
+            length = 5;
+            before = 1;
+            after = -1;
+            AddPoint(0, 0);
+            AddPoint(0, 1);
+            AddPoint(0, 2);
+            AddPoint(0, 3);
+            AddPoint(0, 4);
             break;
         case 3:
             color = 1;
@@ -125,34 +125,47 @@ void Detail::Make(int number) {
             AddPoint(2, 0);
             break;
         case 5:
-            color = 0;
+            color = 1;
             num = 5;
-            height = 2;
+            height = 3;
             length = 3;
-            before = 3;
-            after = 3;
+            before = 1;
+            after = 1;
             AddPoint(0, 0);
             AddPoint(0, 1);
-            AddPoint(0, 2);
-            AddPoint(1, 0);
             AddPoint(1, 1);
+            AddPoint(2, 1);
+            AddPoint(2, 2);
             break;
         case 6:
-            color = 1;
+            color = 0;
             num = 6;
             height = 3;
             length = 3;
             before = 3;
-            after = 3;
-            AddPoint(0, 1);
+            after = -1;
+            AddPoint(0, 0);
             AddPoint(1, 0);
             AddPoint(1, 1);
             AddPoint(1, 2);
-            AddPoint(2, 2);
+            AddPoint(2, 0);
             break;
         case 7:
-            color = 1;
+            color = 0;
             num = 7;
+            height = 3;
+            length = 3;
+            before = 3;
+            after = -1;
+            AddPoint(0, 1);
+            AddPoint(0, 2);
+            AddPoint(1, 0);
+            AddPoint(1, 1);
+            AddPoint(2, 0);
+            break;
+        case 8:
+            color = 1;
+            num = 8;
             height = 2;
             length = 3;
             before = 3;
@@ -163,9 +176,9 @@ void Detail::Make(int number) {
             AddPoint(1, 0);
             AddPoint(1, 2);
             break;
-        case 8:
+        case 9:
             color = 0;
-            num = 8;
+            num = 9;
             height = 4;
             length = 2;
             before = 3;
@@ -176,48 +189,9 @@ void Detail::Make(int number) {
             AddPoint(2, 1);
             AddPoint(3, 0);
             break;
-        case 9:
-            color = 0;
-            num = 9;
-            height = 3;
-            length = 3;
-            before = 3;
-            after = -1;
-            AddPoint(0, 0);
-            AddPoint(1, 0);
-            AddPoint(1, 1);
-            AddPoint(1, 2);
-            AddPoint(2, 0);
-            break;
         case 10:
-            color = 0;
-            num = 10;
-            height = 3;
-            length = 3;
-            before = 3;
-            after = -1;
-            AddPoint(0, 1);
-            AddPoint(0, 2);
-            AddPoint(1, 0);
-            AddPoint(1, 1);
-            AddPoint(2, 0);
-            break;
-        case 11:
-            color = 0;
-            num = 11;
-            height = 1;
-            length = 5;
-            before = 1;
-            after = -1;
-            AddPoint(0, 0);
-            AddPoint(0, 1);
-            AddPoint(0, 2);
-            AddPoint(0, 3);
-            AddPoint(0, 4);
-            break;
-        case 12:
             color = 1;
-            num = 12;
+            num = 10;
             height = 4;
             length = 2;
             before = 3;
@@ -228,23 +202,48 @@ void Detail::Make(int number) {
             AddPoint(3, 0);
             AddPoint(3, 1);
             break;
-        case 13:
-            color = 0;
-            num = 13;
+        case 11:
+            color = 1;
+            num = 11;
+            height = 4;
+            length = 2;
+            before = 3;
+            after = 3;
+            AddPoint(0, 1);
+            AddPoint(1, 0);
+            AddPoint(1, 1);
+            AddPoint(2, 0);
+            AddPoint(3, 0);
+            break;
+        case 12:
+            color = 1;
+            num = 12;
             height = 3;
             length = 3;
-            before = 0;
-            after = -1;
+            before = 3;
+            after = 3;
             AddPoint(0, 1);
             AddPoint(1, 0);
             AddPoint(1, 1);
             AddPoint(1, 2);
-            AddPoint(2, 1);
+            AddPoint(2, 2);
+            break;
+        case 13:
+            color = 0;
+            num = 13;
+            height = 2;
+            length = 3;
+            before = 3;
+            after = 3;
+            AddPoint(0, 0);
+            AddPoint(0, 1);
+            AddPoint(0, 2);
+            AddPoint(1, 0);
+            AddPoint(1, 1);
             break;
     }
     return;
 }
-
 void Detail::Print() {
     for (int i = 0; i < height; ++i) {
         for (int j = 0; j < length; ++j) {
