@@ -3,7 +3,6 @@
 #include "Deck.h"
 int main() {
     Deck d;
-    d.Bust(0);
-    // d.Print();
+    d.Solve();
     return 0;
 }
