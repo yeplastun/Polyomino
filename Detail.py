@@ -182,7 +182,7 @@ class Detail:
         for i in range(self.height):
             s = ""
             for j in range(self.length):
-                b = [item for item in range(self.data.len()) if self.data[item] == [i, j]]
+                b = [item for item in range(len(self.data)) if self.data[item] == [i, j]]
                 if len(b) > 0:
                     if self.num > 9:
                         s += ' ' + str(self.num)
